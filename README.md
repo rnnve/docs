@@ -17,6 +17,13 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## Explore
 
+The API reference is available at `/docs/api-playground`. It loads
+`https://api.rynni.cc/openapi.yaml` through `/api/openapi`, with a 60 second
+schema cache. Interactive requests go directly to `https://api.rynni.cc`,
+which must allow your documentation site's origin through CORS.
+
+Run the schema proxy checks with `node --test tests/openapi.test.mjs`.
+
 In the project, you can see:
 
 - `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
