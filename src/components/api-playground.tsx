@@ -9,7 +9,7 @@ export function ApiPlayground() {
         configuration={{
           url: '/api/openapi',
           hideDownloadButton: true,
-          baseServerURL: 'https://api.applefumi.xyz',
+          baseServerURL: 'https://api.rynni.cc',
         }}
       />
     </div>

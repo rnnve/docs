@@ -4,7 +4,7 @@ export const revalidate = 60;
 
 export async function GET() {
   try {
-    const res = await fetch('https://api.applefumi.xyz/openapi.yaml', {
+    const res = await fetch('https://api.rynni.cc/openapi.yaml', {
       signal: AbortSignal.timeout(10000),
     });
 
