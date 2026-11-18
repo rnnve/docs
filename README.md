@@ -15,6 +15,14 @@ yarn dev
 
 Open http://localhost:3000 with your browser to see the result.
 
+Docs are served at `/`, and the API reference is at `/api-playground`.
+Previous `/docs` URLs permanently redirect to their root equivalents.
+The production domain is `docs.rynni.cc`. Add it to the Vercel `docs`
+project and configure the `docs` CNAME in Cloudflare using the target Vercel provides.
+
+With the app running, verify routes with `node --test tests/routes.test.mjs`.
+Set `TEST_BASE_URL` to check a deployment instead of localhost.
+
 ## Explore
 
 In the project, you can see:
@@ -24,9 +32,9 @@ In the project, you can see:
 
 | Route                     | Description                                            |
 | ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+| `src/app/(home)/[[...slug]]` | Documentation pages, including the root page.        |
+| `src/app/(home)/layout.tsx` | The shared documentation layout.                     |
+| `src/app/api/search/route.ts` | The Route Handler for search.                      |
 
 ### Fumadocs MDX
 
